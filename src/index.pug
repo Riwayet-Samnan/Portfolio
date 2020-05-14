@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(name="author" content="Riwayet Samnan | Designer and developer")
+      meta(name="description" content="Hi, I'm Riwayet Samnan. I'm a passionate full-stack developer and user interface, user experience and illustration designer")
+      meta(name="keywords" content="portfolio, creative, designer, developer, full-stack, riwayet samnan, samnan, portfolio site, homepage")
+      meta(property="og:title" content="Riwayet Samnan | Designer and developer")
+      meta(property="og:description" content="Hi, I'm Riwayet Samnan. I'm a passionate full-stack developer and user interface, user experience and illustration designer")
+      meta(property="og:image" content="img/rs_bg.jpg")
+      meta(property="og:image:width" content="400")
+      meta(property="og:image:height" content="400")
+      meta(name="theme-color" content="#1f1f29")
+      link(rel="shortcut icon" href="img/rs_icon.png")
+      link(rel="icon" type="image/png" sizes="80x80" href="img/rs_bg.jpg")
+      link(rel="app-touch-icon" type="image/png" sizes="40x40" href="img/rs_bg.jpg")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Sen&display=swap")
+      link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+      title Samnan
+   body
+      .backdrop
+      button.projectCloseBtn
+         img(src="img/icons/close.svg", alt="")
+      .projectView
+         .main-thing
+            .cont
+               img(src="", alt="")
+            .text-cont
+               h1.title 
+               p
+               .links
+                  a(href="").dribbble.slide-effect
+                     img(src="img/icons/dribbble.svg")
+                     p Dribbble
+                  a(href="").behance.slide-effect
+                     img(src="img/icons/behance.svg")
+                     p Behance
+         .buttons
+            button.prev
+               img(src="img/icons/next.svg")
+               p Prev
+            button.next
+               p Next
+               img(src="img/icons/next.svg")
+
+      .load
+         .circ
+
+      nav#navbar
+         buttons.navbutton
+            img(src="img/icons/menu.svg")
+         h1.logo RS
+         ul
+            li
+               a(href="").slide-effect.navlink.active
+                  p Home
+            li
+               a(href="").slide-effect.navlink
+                  p About
+            li
+               a(href="portfolio.pug").slide-effect.navlink
+                  p Portfolio
+            li
+               a(href="").slide-effect.navlink.imp
+                  p Contact
+      
+      div#bottom-nav
+         a(href="").active
+            img(src="img/icons/home.svg", alt="Home")
+         a(href="")
+            img(src="img/icons/me.svg", alt="About")
+         a(href="portfolio.pug")
+            img(src="img/icons/portfolio.svg", alt="Portfolio")
+         a(href="")
+            img(src="img/icons/chat.svg", alt="Contact")
+
+      div#sidebar
+         button.button.navclosebutton
+            img(src="img/icons/close.svg")
+         a(href="").active.left Home
+         a(href="").right.navlink About
+         a(href="portfolio.pug").left.navlink Portfolio
+         a(href="").right.navlink Contact
+
+      header
+         .startup-screen
+            h2.watermark.two DEVELOPER
+            h2.watermark.one DESIGNER
+            h1.step-one Hi, I'm Riwayet Samnan
+            h1.step-two I'm a full-stack developer and designer
+
+         .header-nav
+            ul
+               li
+                  a(href="").active Home
+               li
+                  a(href="").navlink About
+               li
+                  a(href="portfolio.pug").navlink Portfolio
+               li
+                  a(href="").important.navlink Contact
+
+         .text-cont
+            h2.header-subtitle Hi, Im <span>Riwayet Samnan</span>
+            h1.header-title I bring your imaginations to life
+            h2.header-subtitle Full-stack developer and UI/UX, illustration designer
+            
+            .links
+               a(href="").main.button.slide-effect.flex-center.navlink
+                  p Contact
+               a(href="portfolio.pug").submain.button.slide-effect.flex-center.navlink
+                  p Portfolio
+
+         .cont.overflow-hidden
+            .img-cont
+               .img.one.ov
+                  .overlay.one
+                  .main-img.one
+
+      section#About
+         .img-cont
+            .cont.overflow-hidden
+               img(src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="About me").ov
+         .text-cont
+            h1.title.anim A little about me
+            p.plain-text.anim Hi, I'm <span class="highlight">Riwayet Samnan, 13.</span> I'm a full-stack developer and UI/UX, illustration designer. I have 2 years of experience at design and development with working seamlessly on it. My passion is coding and designing creative things.
+
+      section#Skills
+         h1.section-title My skills
+         .langs
+            a(href="https://en.wikipedia.org/wiki/HTML").html
+               img(src="https://image.flaticon.com/icons/svg/732/732212.svg")
+               p
+                  span HTML
+            a(href="https://en.wikipedia.org/wiki/CSS").css
+               img(src="https://image.flaticon.com/icons/svg/732/732190.svg")
+               p
+                  span CSS
+            a(href="https://en.wikipedia.org/wiki/JavaScript").js
+               img(src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg")
+               p
+                  span JS
+            a(href="https://angular.io").angular
+               img(src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg")
+               p
+                  span Angular
+            a(href="https://reactjs.org").react
+               img(src="https://cdn.worldvectorlogo.com/logos/react-2.svg")
+               p
+                  span React
+            a(href="https://vuejs.org").vue
+               img(src="https://cdn.worldvectorlogo.com/logos/vue-9.svg")
+               p
+                  span Vue
+            a(href="https://www.typescriptlang.org").ts
+               img(src="https://cdn.worldvectorlogo.com/logos/typescript.svg")
+               p
+                  span TS
+            a(href="https://firebase.google.com").firebase
+               img(src="https://img.icons8.com/color/480/firebase.png")
+               p
+                  span Firebase
+            a(href="https://mysql.com").MySQL
+               img(src="https://image.flaticon.com/icons/svg/528/528260.svg")
+               p
+                  span MySQL
+            a(href="https://php.org").php
+               img(src="https://image.flaticon.com/icons/svg/919/919830.svg")
+               p
+                  span PHP
+            a(href="https://affinity.serif.com/designer").afdesigner
+               img(src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Affinity_designer_icon_2019.png")
+               p
+                  span Affinity Designer
+            a(href="https://affinity.serif.com/photo").afPhoto
+               img(src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Affinity_Photo_icon.png")
+               p
+                  span Affinity Photo
+            a(href="https://gimp.org").gimp
+               img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/1024px-The_GIMP_icon_-_gnome.svg.png")
+               p
+                  span GIMP
+            a(href="https://figma.com").figma
+               img(src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/237/square_480/figma-1-logo.png")
+               p
+                  span Figma
+
+      section#Projects
+         h1.section-title Some of my projects
+         .cont
+            button
+               .img-cont.overflow-hidden.one.ov
+                  img(src="img/darkslint.jpg", alt="Project")
+               p.one Slint
+            button
+               .img-cont.overflow-hidden.one.ov
+                  img(src="img/lake.jpg", alt="Project")
+               p.one Lake
+            button
+               .img-cont.overflow-hidden.two.ov
+                  img(src="img/night_sky.jpg", alt="Project")
+               p.two Night sky
+            button
+               .img-cont.overflow-hidden.two.ov
+                  img(src="img/coffee_site.jpg", alt="Project")
+               p.two Coffee Site design
+         a(href="portfolio.pug").button.submain.fade-hover.navlink See all in <span class="highlight">Portfolio</span>
+
+      section#Feedback.flex-center
+         img(src="img/quotes.svg")
+         p.plain-text Really good guy to work with, provided me with a great mockup of the site I wanted and made the necessary changes that I requested. The website was a speedy process but the outcome turned out to exceed my expectations. Would recommend for anyone needed a website moving forward
+         .from
+            hr
+            h2 Zeus
+
+      section#Contact.flex-center
+         h1.section-title Lets meet
+         form(name="contact" method="POST" data-netlify="true")
+            .inp_group#name-g
+               label(for="name") Name
+               input(type="text" name="name" id="name" required)
+            .inp_group#email-g
+               label(for="email") Email
+               input(type="email" name="email" id="email" required)
+            .inp_group#message-g
+               label(for="message") Message
+               textarea(name="message" id="message" cols="30" rows="6" required)
+
+            button(type="submit").button.main.fade-hover Submit
+         
+         h2 More ways to meet in <a href="">Contact</a>
+
+      footer
+         p CopyRight &copy; 2020 | Riwayet Samnan <span>  Developed by Samnan</span>
+         .links
+            a(href="https://twitter.com/r_samnan")
+               img(src="img/icons/twitter.svg", alt="")
+            a(href="https://facebook.com/riwayet.samnan.5")
+               img(src="img/icons/facebook.svg", alt="")
+            a(href="https://dribbble.com/Samnan")
+               img(src="img/icons/dribbble.svg", alt="")
+            a(href="https://behance.net/riwayetsamnan")
+               img(src="img/icons/behance.svg", alt="")
+            a(href="https://github.com/riwayet-samnan")
+               img(src="img/icons/github.svg", alt="")
+
+   script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js")
+   script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js")
+   script(src="js/main.js")
+      

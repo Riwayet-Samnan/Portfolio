@@ -1,0 +1,154 @@
+
+$i: !important
+
+@media screen and ( max-width: 800px )
+   .headerNav
+      display: none
+
+   header
+      .header-title
+         margin: 0 1em
+         justify-content: center
+
+   .otherProject-close-btn
+      right: auto $i
+      border-radius: 10rem
+      padding: 1em
+      background: #974242 $i
+
+   #mainwork, #otherwork
+      .cont
+         width: 90vw
+         grid-template-columns: 90vw
+         grid-gap: 1em 0
+
+         .img-cont
+            img
+               width: 90vw
+
+   .projectView
+      background: #18141bc2
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+   .follow
+      font-size: 1.2em
+
+      span
+         font-size: 1.3em
+         margin-top: 1em
+         display: block
+
+   #otherpages
+      margin-top: 10vh
+
+   .close-btn
+      right: 50% $i
+      top: 2.5% $i
+      transform: translateX(50%)
+      padding: 1.5em
+      background: #974242 $i
+
+      img
+         width: 1.5em $i
+
+   .projectView
+      align-items: center
+
+   .projectCont
+      max-width: 700px
+      flex-direction: column
+      background: $background
+      height: auto $i
+
+      .text-cont
+         width: 100vw $i
+         padding: 2.2em 2.5em $i 
+
+         .buttons
+            margin-top: 2em
+            position: static $i
+
+            button
+               background: $secondary-grey $i
+               padding: 1.2em 2.5em $i
+
+         .links
+            a
+               width: 100%
+               height: 4em $i
+
+      .img-cont
+         width: 100vw $i
+         height: 100% $i
+
+      .main-img
+         max-width: 700px
+         width: 100vw $i
+         height: 100% $i
+      
+      .text-cont
+         max-width: 700px
+
+   // Other Project
+
+   .otherProjectView
+      .main-section-img
+         width: 90vw
+
+      .content
+         margin-top: 2em
+         flex-direction: column
+
+         .links
+            width: 90vw
+
+            a
+               width: 100%
+               justify-content: center
+               padding: 1.2em 1.5em $i
+
+         .buttons
+            margin-left: 0
+            margin-top: 2em
+            width: 70vw
+            padding: 0
+
+            button
+               justify-content: center
+               width: 100%
+               padding: 1.2em 1.5em
+
+               &:hover
+                  background: rgba(46, 47, 60, 0.9)
+
+               &:active
+                  background: lighten($secondary-grey, 10%)
+
+               &.disabled
+                  opacity: 0.9
+
+
+@media screen and ( max-width: 900px ) and ( min-width: 700px ) 
+
+   .close-btn
+      bottom: 2em $i
+      top: auto $i
+
+   .projectCont
+      .buttons
+         button
+            margin: 0em 2em $i
+ 
+   .otherProjectView
+      .main-section-img
+         width: 70vw
+
+      .content
+         .links, .buttons
+            width: 55vw 
+
+
+   
+   

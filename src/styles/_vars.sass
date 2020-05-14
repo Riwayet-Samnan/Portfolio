@@ -1,0 +1,20 @@
+$background: #18141b
+$light-blue: #9bb0eb
+$dark-blue: #163685
+$secondary-grey: #23242e
+$main-blue: #2548a0
+$default-text-color: #dbdada
+
+flexcenter
+   display: flex
+   flex-direction: center
+   align-items: center
+   justify-content: center
+   flex-direction: column
+
+@mixin size($width, $height...)
+   width: $width
+   height: $width
+
+   @if length($height) != 0
+      height: $height

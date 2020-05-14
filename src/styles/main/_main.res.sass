@@ -1,0 +1,251 @@
+@import '../_vars'
+
+@media screen and ( max-width: 310px )
+   .header-title
+      span
+         h1
+            font-size: 1.1em !important
+
+   #Contact
+      form
+         grid-template-columns: 220px !important
+
+         button
+            width: 100%
+
+@media screen and ( max-width: 800px )
+
+   .button
+      padding: 18px 35px
+
+   html
+      font-size: 75%
+
+   section
+      width: 99.5vw
+      margin-top: 18vh
+   
+   .section-title
+      font-size: 2.2em
+
+   .projectCloseBtn
+      top: 2%
+      opacity: 1
+
+   header
+      .img-cont
+         width: 100vw
+
+      .cont
+         width: 100vw
+         z-index: -1
+
+      .text-cont
+         padding-left: 8vw
+         width: 90%
+
+         .links
+            a.submain
+               background: lighten($secondary-grey, 10%)
+
+         .header-title
+            margin: 0.8em 0
+            font-size: 2.4em
+
+         .header-subtitle
+            line-height: 2em
+
+         span
+            h1
+               font-size: 1.3em
+
+      .img.one
+         width: 100%
+
+         .overlay
+            background: #1b2125
+            opacity: 0.98
+            width: 100%
+            mix-blend-mode: multiply
+
+         .main-img
+            width: 100%
+
+      .img.two
+         width: 100%
+         display: none
+
+   .header-nav
+      display: none
+
+   .projectView
+      .main-thing
+         flex-direction: column
+
+         img
+            width: 70vw
+
+      .buttons
+         bottom: 3%
+
+      .text-cont
+         padding: 2em 1.3em !important
+         width: 90vw !important
+
+         .links
+            justify-items: space-between !important
+
+            a
+               justify-content: center
+               height: 4em !important
+               padding: 1.3em 0 !important
+               width: 100%
+               margin: 0 3px !important
+               font-size: 1.03em !important
+
+
+   .projectView > div > div > img
+      width: 90vw !important
+      height: auto
+
+   #Contact
+      form
+         flex-direction: column
+         justify-content: center
+         align-items: center
+
+         .cont
+            margin: 0
+
+   #About
+      grid-template-columns: 100%
+
+      .img-cont
+         display: flex
+         flex-direction: column
+         align-items: center
+         margin-bottom: 2.5em
+
+         .cont
+            height: 35vh
+            width: 85vw
+
+            img
+               width: 90vw
+               object-position: right
+
+      .text-cont
+
+         .title
+            font-size: 2em
+            margin-bottom: 1.2em
+            font-weight: bold
+         
+         a
+            width: 100%
+            display: flex
+            justify-content: center
+
+   #Skills
+      .langs
+         padding: 0 1%
+
+   #Projects
+      text-align: center
+
+      .cont
+         grid-template-columns: 100%
+
+         img
+            width: 90vw !important
+
+      a
+         width: 80%
+
+   #Contact
+      form
+         grid-template-columns: 270px
+         grid-template-rows: auto auto auto 3.5em
+         grid-template-areas: "name" "email" "message" "button"
+         grid-gap: 30px 0
+
+         button
+            width: 100%
+
+@media screen and ( max-width: 700px ) and ( min-width: 500px )
+   .projectView
+      .cont
+         img
+            width: 60vw !important
+
+      .text-cont
+         width: 60vw !important
+
+      .buttons
+         width: 100vw
+         position: absolute
+         bottom: unset !important
+
+         button
+            position: absolute
+
+            &.prev
+               left: 0%
+            &.next
+               right: 0%
+   
+
+@media screen and ( max-width: 980px) and ( min-width: 800px )
+   html
+      font-size: 80%
+
+   #About
+      img
+         height: 50vh !important
+
+   #Contact
+      input,textarea
+         width: 300px !important
+         
+   .projectView
+      .main-thing
+         flex-direction: column
+
+      .text-cont
+         width: 50vw
+         height: auto !important
+         padding: 3em 2em !important
+
+         .links
+            a
+               justify-content: center
+               width: 100%
+
+            &.dribbble
+               margin-right: 10px !important
+
+            img
+               margin-right: 10px !important
+
+      .buttons
+         width: 100vw
+         position: absolute
+         bottom: unset !important
+
+         button
+            position: absolute
+
+            &.prev
+               left: 5%
+            &.next
+               right: 5%
+
+      img
+         width: 50vw
+         height: auto
+
+         
+
+      
+   
+

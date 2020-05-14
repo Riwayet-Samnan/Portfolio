@@ -1,0 +1,507 @@
+@import '../_basic-styles'
+@import '../_vars'
+
+section
+   scroll-snap-align: center
+
+header
+   scroll-snap-align: start
+
+body
+   overflow: hidden
+
+.load
+   position: fixed
+   width: 100vw
+   height: 100vh
+   background: $background
+   z-index: 800
+   @extend flexcenter
+
+   .circ
+      padding: 30px
+      border: 5px solid #ddd
+      border-left-color: transparent
+      border-radius: 10rem
+      animation: rotate 1s linear infinite
+
+@keyframes rotate
+   0%
+      transform: rotate(0)
+   100%
+      transform: rotate(360deg)
+   
+header
+   +size(100vw, 100vh)
+   position: relative
+   overflow: hidden
+
+   .startup-screen
+      +size(100vw, 100vh)
+      top: 0
+      position: absolute
+      z-index: 10
+      overflow: hidden
+      pointer-events: none
+      @extend flexcenter
+
+      .watermark
+         position: absolute
+         font-weight: bold
+         font-size: 45vh
+         opacity: 0.04
+         
+         &.one
+            top: 0
+         
+         &.two
+            bottom: 0
+
+      h1
+         text-align: center
+         font-size: 1.5em
+         opacity: 0
+         transform: translateY(-10%)
+         position: absolute
+
+   .header-nav
+      top: 25px
+      left: 0
+      padding-left: 4vw
+      position: absolute
+      
+      ul
+         margin: 0
+         padding: 0
+         display: flex
+
+      a
+         font-size: 1.15em
+         padding: 0.8em 1.5em
+         @extend flexcenter
+         transition: all 0.2s ease-in-out
+
+         &:hover
+            color: #fff
+            background: $secondary-grey
+
+         &.active
+            pointer-events: none
+            opacity: 0.8
+            background: #27283394
+
+         &.important
+            &:hover
+               background: #5177d869
+
+   .links
+      display: flex
+      margin-top: 40px
+
+   .text-cont
+      padding-left: 5vw
+      +size(50%, 100vh)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-top: 5vh
+   
+   .header-subtitle
+      margin: 0 !important
+      font-size: 1.2em
+      text-shaddow: inner 0px 0px 1px #000
+
+      span
+         color: $light-blue
+
+   .header-title
+      margin: 0.45em 0
+      display: flex
+      flex-wrap: wrap
+
+      span
+         overflow: hidden
+         margin-right: 0.3em
+
+         h1
+            font-weight: bold
+            font-size: 1.45em
+
+   .cont
+      height: 100%
+      width: 50vw
+      top: 0
+      right: 0
+      position: absolute
+
+   .img-cont
+      overflow: hidden
+      position: absolute
+      height: 100%
+      right: 0
+      top: 0
+      width: 50vw
+
+      .img
+         height: 100%
+         width: 100%
+         overflow: hidden
+         position: relative
+
+         &::before
+            content: ''
+            height: 100%
+            width: 100%
+            position: absolute
+            opacity: 0.5
+            z-index: 3  
+
+      .overlay
+         right: 0
+         z-index: 5
+         position: absolute
+         background: #b82052
+         mix-blend-mode: multiply
+         opacity: 0.8
+         +size(100%)
+         width: 80%
+         background: #4f3bbd
+
+      .main-img
+         position: absolute
+         +size(100%)
+         background:
+            repeat: no-repeat
+            size: cover
+         right: 0
+         width: 80%
+         background-image: url('../../img/absfreepik.jpg')
+
+#About
+   display: grid
+   grid-template-columns: 45% 55%
+   justify-items: center
+   align-items: center
+
+   .img-cont
+      +size(100%)
+      filter: brightness(85%)
+
+      .cont
+         width: 45vw
+         max-height: 70vh
+         overflow: hidden
+
+      img
+         width: 45vw
+         height: 70vh
+         object-fit: cover
+
+   .text-cont
+      padding: 0 7%
+      width: 90%
+
+      .title
+         margin-bottom: 20px
+
+      a
+         margin-top: 30px
+
+#Skills
+   text-align: center
+
+   .langs
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      padding: 0 5%
+
+      a
+         @extend flexcenter
+         flex-direction: column
+         width: 7em
+         margin: 10px
+         // background: $secondary-grey
+         align-items: center
+         text-align: center
+         margin-bottom: 40px
+
+         img
+            width: 3.5em
+
+         p
+            padding: 0 20px
+            margin-top: 20px
+            font-size: 0.95em
+
+#Projects
+   @extend flexcenter
+   scroll-snap-align: none
+
+   .cont
+      width: 88vw
+      display: grid
+      grid-template-columns: 50% 50%
+      grid-row-gap: 50px
+      justify-content: center
+      justify-items: center
+
+      button
+         position: relative
+         width: 94%
+         border: none
+         outline: 0 !important
+         background: transparent
+         scroll-snap-align: center
+
+         &:hover
+            img
+               filter: saturate(50%)
+
+         .img-cont
+            @extend flexcenter
+
+         p
+            font-size: 1.2em
+            background: $dark-blue
+            padding: 20px 30px
+            position: absolute
+            right: 6px
+            bottom: 0px
+
+         img
+            +size(40vw, 100%)
+            object-position: center
+            object-fit: cover
+            transition: filter 0.3s ease
+
+   a
+      margin-top: 70px
+
+#Feedback
+   img
+      margin-bottom: 35px
+
+   p
+      text-align: center
+      width: 80%
+
+   hr
+      width: 80%
+      margin-top: 30px
+      border: 2px solid $main-blue
+
+#Contact
+   scroll-snap-align: none !important
+
+   form
+      display: grid
+      grid-template-columns: 330px 330px
+      grid-template-rows: auto auto 3em
+      grid-template-areas: "name message" "email message" "button ."
+      justify-content: flex-end
+      align-items: flex-start
+      grid-gap: 10px 30px
+      position: relative
+
+      div
+         +size(100%)
+         display: flex
+         flex-direction: column
+
+      #name-g
+         grid-area: name
+
+      #message-g
+         grid-area: message
+         height: 100%
+
+      #email-g
+         grid-area: email
+         justify-content: flex-end
+
+      label
+         font-size: 1.1em
+         display: block
+
+      input, textarea
+         resize: none
+         border: none
+         padding: 0.7em 1em
+         background: lighten($secondary-grey, 10%)
+         font-size: 1.2em
+         transition: all 0.2s ease-in-out
+         border-left: 0px solid $light-blue
+
+         &:focus
+            background: lighten($secondary-grey, 20%)
+            outline: 0
+            border-width: 5.5px
+
+      
+      input, textarea
+         width: 100%
+      
+      textarea
+         height: 100%
+
+      button
+         padding: 1em 0
+         font-size: 1.12em
+         z-index: 5
+         margin-top: 30px
+         width: 7em
+         height: 110%
+         border: none
+         grid-area: button
+         @extend flexcenter
+
+   h2
+      margin-top: 110px
+      font-size: 1.5em
+
+      a
+         color: $light-blue
+
+.backdrop
+   opacity: 0
+   position: fixed
+   background: $secondary-grey
+   pointer-events: none
+   z-index: 790
+   @extend flexcenter
+   +size(100vw, 100vh)
+
+.projectCloseBtn
+   position: fixed
+   top: 3vh
+   left: 50%
+   z-index: 900
+   padding: 1em
+   background: #ca5f5f
+   opacity: 0.7
+   border-radius: 10rem
+   border: none
+   transition: 0.3s
+   transform: scale(0) translateX(-50%)
+
+   &:focus
+      outline: 0 !important
+
+   &:hover
+      opacity: 1
+
+   img
+      width: 1.4em
+
+.projectView
+   position: fixed
+   +size(100vw, 100vh)
+   @extend flexcenter
+   opacity: 0
+   transform: scale(0.5)
+   z-index: 800
+   pointer-events: none
+   flex-direction: row
+
+   .buttons
+      position: absolute
+      bottom: 3%
+      pointer-events: all
+      display: flex
+
+      button
+         background: lighten($secondary-grey, 10%)
+         margin: 0 10px
+         padding: 0 1em
+         border: none
+         font-size: 1.1em
+         transition: 0.3s ease
+         display: flex
+         height: 3em
+         justify-content: space-around
+         align-items: center
+
+         &.prev
+            img
+               margin-right: 15px
+               margin-left: 0  
+               transform: rotateY(180deg)
+
+         img
+            margin-left: 15px
+            width: 1.2em
+            height: auto !important
+
+         &:hover
+            background: lighten($secondary-grey, 20%)
+
+         &:focus
+            outline: 0
+
+   .main-thing
+      width: 90%
+      pointer-events: none
+      display: flex
+      align-items: center
+
+      .text-cont
+         height: 100%
+         padding: 0 2.5em
+         background: $background
+         display: flex
+         flex-direction: column
+         justify-content: center
+
+         a
+            color: $light-blue
+
+         .links
+            display: flex
+            margin-top: 2em
+
+            a
+               font-size: 1.1em
+               margin-right: 20px
+               display: flex
+               align-items: center
+               height: 3.5em
+               background: $secondary-grey
+               padding: 0.8em 1.1em
+               transition: all 0.3s ease
+               position: relative
+
+               &::after
+                  transform: translateX(-110%)
+                  background: $dark-blue
+
+               img
+                  z-index: 5
+                  margin-right: 20px
+                  width: 1.3em
+
+         .title
+            margin: 0.5em 0
+            font-size: 2.2em
+
+         p
+            line-height: 1.5em
+            font-size: 1.1em
+
+   img
+      height: 34vw
+
+   
+@import './_main.res'
+
+ 
+
+         
+
+      
+
+
+
+
+
+

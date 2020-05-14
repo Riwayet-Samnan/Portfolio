@@ -1,0 +1,363 @@
+@import '../_basic-styles'
+
+.disabled
+   pointer-events: none
+   opacity: 0.7
+
+.load
+   pointer-events: none
+   background: $background
+   position: fixed
+   +size(100vw, 100vh)
+   @extend flexcenter
+   z-index: 500
+
+.loading
+   position: fixed
+   +size(100vw, 100vh)
+   background: $background
+   z-index: 100
+   @extend flexcenter
+
+   .container
+      +size(15vh)
+      position: relative
+      background: #555
+
+      .el
+         left: 0
+         position: absolute
+         background: #dddddd
+         +size(7.5vh)
+         animation: name 1200ms infinite 
+
+.headerNav
+   position: absolute
+   top: 2em
+   width: 100vw
+   @extend flexcenter
+   z-index: 30
+
+   ul
+      display: flex
+      padding: 0
+
+      a
+         font-size: 1.15em
+         padding: 1em 1.5em
+         transition: background 0.3s
+
+         &:hover
+            background: fade-out($secondary-grey, 0.3%)
+
+header
+   height: 80vh
+   position: relative
+   @extend flexcenter
+   overflow: hidden
+
+   .img-cont
+      z-index: 1
+      top: 0
+      position: absolute
+      overflow: hidden
+      +size(100%)
+
+      img
+         width: 100vw
+         height: 80vh
+         object-fit: cover
+
+   .overlay
+      top: 0
+      z-index: 2
+      position: absolute
+      background: #232e57
+      mix-blend-mode: multiply
+      +size(100%)
+
+   .header-title
+      z-index: 10
+      font-weight: bold
+      display: flex
+      flex-wrap: wrap
+
+      span
+         overflow: hidden
+         margin-right: 0.3em
+
+         &:last-child
+            margin: 0 !important
+
+         h1
+            font-weight: bold
+            font-size: 1.4em
+
+#mainwork
+   z-index: 50
+   @extend flexcenter
+   margin-top: -15vh
+
+#otherwork
+   @extend flexcenter
+   margin-top: 10vh
+
+   .title
+      margin-bottom: 1.5em
+
+.start-proj
+   z-index: 50
+
+.cont
+   width: 80vw
+   display: grid
+   grid-template-columns: 50% 50%
+   justify-content: center
+   grid-gap: 30px
+
+   button
+      +size(100%)
+      background: transparent 
+      position: relative
+
+      &:hover
+         .content
+            opacity: 1
+
+      img
+         height: 100%
+         width: 40vw
+         object-fit: cover
+         object-position: center
+
+      .content
+         +size(100%)
+         position: absolute
+         opacity: 0
+         background: #22222249
+         top: 0
+         transition: all 0.3s ease
+
+         h1
+            position: absolute
+            bottom: 0
+            left: 0
+            background: $secondary-grey
+            padding: 0.6em 1em
+            font-size: 1.7em
+         
+         .links
+            display: flex
+            position: absolute
+            right: 0
+            bottom: 0
+            padding: 0.6em 1em
+
+            a
+               padding: 0.8em
+               background: $secondary-grey
+               border-radius: 10rem
+               transition: background 0.3s 
+
+               &:hover
+                  background: lighten($secondary-grey, 8%)
+
+               &.dribbble
+                  margin-right: 1em
+
+               img
+                  object-fit: contain
+                  width: 1.7em
+
+.projectView
+   position: fixed
+   +size(100vw, 100vh)
+   z-index: 800
+   background: $background
+   pointer-events: none
+   opacity: 0
+
+   .close-btn
+      position: absolute
+      right: 2.5em
+      top: 2em
+      z-index: 50
+      background: transparent
+      border-radius: 10rem
+
+      img
+         width: 1.4em
+
+   .projectCont
+      +size(100%)
+      display: flex
+
+      .img-cont
+         width: 65vw
+
+      .main-img
+         width: 65vw
+         height: 100vh
+         object-fit: cover
+         object-position: center
+
+      .text-cont
+         +size(35vw, 100%)
+         padding: 2em
+         display: flex
+         flex-direction: column
+         justify-content: center
+         position: relative
+
+         .para
+            margin-top: 1.2em
+            font-size: 1.1em
+            line-height: 1.7em
+
+         .links
+            margin-top: 1.6em
+            display: flex
+            align-items: center
+
+            a
+               background: $secondary-grey
+               padding: 1.5em
+               height: 3.4em
+               @extend flexcenter   
+               flex-direction: row
+
+               &::after
+                  background: $dark-blue
+
+               &:first-child
+                  margin-right: 1.2em
+
+               p
+                  font-size: 1.1em
+                  color: #ddd
+
+               img
+                  z-index: 5
+                  margin-right: 0.7em
+                  width: 1.4em 
+                  object-fit: contain
+
+         .buttons
+            width: 100%
+            right: 0
+            position: absolute
+            bottom: 2em
+            display: flex
+            justify-content: center
+
+            button
+               padding: 0.9em 1.4em
+               margin: 0 1em
+               background: $secondary-grey
+               display: flex
+               align-items: center
+               justify-content: center
+               background: fade-out($secondary-grey, 0.4%)
+               transition: all 0.3s ease
+
+               &:hover
+                  background: lighten($secondary-grey, 5%)
+
+               &.prev
+                  img
+                     transform: rotateY(180deg)
+                     margin-right: 0.6em
+
+               &.next
+                  img
+                     order: 2
+                     margin-left: 0.6em
+
+            img
+               object-fit: contain
+               width: 1.3em
+
+.otherProjectView
+   position: fixed
+   @extend flexcenter
+   z-index: 800
+   background: fade-out($background, 0.15%)
+   +size(100vw, 100vh)
+   pointer-events: none
+   opacity: 0
+
+   .otherProject-close-btn
+      position: absolute
+      top: 2em
+      right: 2em
+      background: transparent
+
+      img
+         width: 1.5em
+
+   .main-section-img
+      width: 52vw
+      margin-bottom: 0.8em
+
+   .content 
+      display: flex
+      align-items: center
+
+   .buttons
+      padding-left: 2em
+      display: flex
+
+      button
+         display: flex
+         align-items: center
+         background: fade-out(lighten($secondary-grey, 5%), 0.1%)
+         padding: 1em 1.5em
+         transition: background 0.2s ease
+
+         &:hover
+            background: lighten($secondary-grey, 10%)
+
+         &.prev
+            margin-right: 0.5em
+
+            img
+               margin-right: 0.5em
+               transform: rotateY(180deg)
+
+         &.next
+            img
+               margin-left: 0.5em
+               order: 2
+
+         img
+            width: 1.5em
+
+   .links
+      display: flex
+
+      a
+         margin-left: 0.5em
+         display: flex
+         align-items: center
+         padding: 1em 1.5em
+         background: lighten($secondary-grey, 5%)
+         transition: all 0.3s ease
+
+         &:hover
+            background: lighten($secondary-grey, 10%)
+
+         img
+            margin-right: 0.5em
+            width: 1.5em
+
+.follow
+   font-size: 1.3em
+   text-align: center
+   margin-top: 10vh
+
+   a
+      color: $light-blue
+
+@import ./_portfolio.res
+
+

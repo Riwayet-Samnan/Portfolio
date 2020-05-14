@@ -1,0 +1,357 @@
+@import './vars'
+
+*
+   font-family: Sen
+   color: $default-text-color
+   -webkit-font-smoothing: antialiased
+   -moz-font-smoothing: antialiased
+   -o-font-smoothing: antialiased
+   -ms-font-smoothing: antialiased
+
+button
+   border: none !important
+
+::-webkit-scrollbar 
+   width: 10px
+
+::-webkit-scrollbar-track 
+   background: $secondary-grey
+
+::-webkit-scrollbar-thumb 
+   background: #2a4fac5e
+
+::-webkit-scrollbar-thumb:hover 
+   background: $main-blue
+
+body
+   scrollbar-color: #2a4fac5e $secondary-grey
+   scrollbar-width: thin
+   overflow-y: scroll
+
+a.slide-effect
+   overflow: hidden
+   margin-right: 20px
+   position: relative
+
+   &:hover
+      &::after
+         transform: none !important
+
+   p
+      z-index: 3
+
+   &::after
+      transition: 0.2s ease-in-out
+      transform: translateX(-103%)
+      content: ''
+      position: absolute
+      background: #a583eecb
+      +size(100%)
+      top: 0
+      left: 0
+      z-index: 1
+
+   &.submain
+      &::after
+         background: #482d50
+
+h1,h1,p
+   margin: 0
+   padding: 0
+   line-height: 1.3em
+
+.plain-text
+   font-size: 1.25em
+   line-height: 1.9em
+
+.highlight
+   color: $light-blue
+
+.fade-hover
+   transition: 0.2s
+
+   &:hover
+      background: $dark-blue
+
+.overflow-hidden
+   overflow: hidden
+
+.flex-center
+   @extend flexcenter
+
+.section-title
+   font-weight: bold
+   margin-bottom: 60px
+
+h1
+   letter-spacing: 2px
+
+ul
+   margin: 0
+
+   li
+      list-style: none
+
+a
+   color: $default-text-color
+   text-decoration: none !important
+
+   &:hover
+      color: $default-text-color
+
+body
+   background: $background
+   overflow-x: hidden
+
+section
+   margin-top: 23vh
+
+.button
+   padding: 1em 1.5em
+   font-size: 1.15em
+   -webkit-appearance: button
+   -moz-appearance: button
+   -o-appearance: button
+   -ms-appearance: button
+   appearance: button
+
+   &:hover
+      color: $default-text-color
+
+.submain
+   background: $secondary-grey
+
+.main
+   background: $main-blue
+
+button
+   outline: 0 !important
+
+.active
+   opacity: 0.8
+   pointer-events: none
+
+#navbar
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   z-index: 100
+   display: flex
+   justify-content: space-between
+   align-items: center
+   padding: 0 35px
+   background: #1f1f29
+
+   .navbutton
+      position: absolute
+      left: 30px
+      display: none
+
+      img
+         width: 1.7em
+
+   .logo
+      font-size: 1.8em
+
+   img
+      width: 2em
+
+   ul
+      display: flex
+      align-items: center
+      margin: 0
+
+      a
+         -webkit-appearance: button
+         margin: 0
+         padding: 1em 1.5em
+         @extend flexcenter
+         font-size: 1em
+         position: relative
+         transition: 0.2s
+
+         &.imp
+            background: #25479e
+
+            &::after
+               background: #3461d1
+
+         &:hover
+            color: #fff
+
+         &::after
+            transform: translateY(-101%)
+            background: lighten($secondary-grey, 15%)
+
+#sidebar
+   z-index: 500
+   position: fixed
+   top: 0
+   left: 0
+   +size(100vw, 100vh)
+   background: $secondary-grey
+   @extend flexcenter
+   flex-direction: column
+   transform: translateY(-100%)
+
+   button
+      position: absolute
+      left: 20px
+      top: 20px
+      background: none
+      border: none
+      z-index: 20
+      border-radius: 10rem
+
+      &:focus, &:active
+         outline: 0 !important
+         background: $secondary-grey
+
+      img
+         width: 1.5em
+
+   a
+      padding: 1.5em 3em
+      font-size: 2em
+
+      &.active
+         color: $light-blue
+
+#bottom-nav
+   z-index: 200
+   background: #1f1f29
+   position: fixed
+   bottom: 0
+   width: 100vw
+   display: none
+   grid-template-columns: repeat(4, 1fr)
+   justify-items: center
+   align-items: center
+
+   a
+      height: 100%
+      padding: 1.33em
+      @extend flexcenter
+
+      &:focus
+         background: $secondary-grey
+
+      &.active
+         pointer-events: none
+
+      img
+         opacity: 0.9
+         width: 1.7em   
+
+.load
+   .circ
+      padding: 30px
+      border: 5px solid #ddd
+      border-left-color: transparent
+      border-radius: 10rem
+      animation: rotate 1s linear infinite
+
+@keyframes rotate
+   0%
+      transform: rotate(0)
+   100%
+      transform: rotate(360deg)  
+
+footer
+   margin-top: 10vh
+   background: #1f1f29
+   padding: 2.5em 3em
+   display: flex
+   width: 100vw
+   justify-content: space-between
+   align-items: center
+
+   p
+      font-size: 1.1em
+
+      span
+         margin-left: 1em
+         opacity: 0.6
+
+   .links
+      display: flex
+
+      a
+         margin: 0 20px
+         transition: all 0.3s ease
+         border-radius: 10em
+
+         &:hover
+            img
+               opacity: 1
+
+      img
+         opacity: 0.85
+         width: 1.9em     
+
+#otherpages
+   margin-top: 18vh
+   text-align: center
+
+   h1
+      font-size: 1.1em
+
+   .links
+      margin-top: 1.5em
+      display: flex
+      justify-content: center
+
+      a
+         font-size: 1.2em
+         padding: 1em 2.3em
+         margin: 0 0.5em
+         transition: background 0.2s ease
+
+      .submain:hover
+         background: lighten($secondary-grey, 10%)
+
+      .main:hover
+         background: lighten($main-blue, 10%)
+
+@media screen and ( max-width: 800px )
+
+   html
+      font-size: 75%
+
+   footer
+      padding: 3em 3em
+      flex-direction: column
+
+      p
+         order: 2
+         margin-top: 35px
+         text-align: center
+         line-height: 2em
+
+         span
+            display: block
+
+      a
+         margin: 0 15px !important
+
+         img
+            width: 2.1em !important
+
+   #navbar
+      z-index: 300
+      justify-content: center
+      padding: 10px 35px
+
+      .navbutton
+         display: block
+
+      ul
+         display: none !important
+
+   #bottom-nav
+      display: grid
+
+         
+            
+            

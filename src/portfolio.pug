@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(name="author" content="Riwayet Samnan | Designer and developer - Portfolio")
+      meta(name="description" content="Hi, I'm Riwayet Samnan. I'm a passionate full-stack developer and user interface, user experience and illustration designer. Welcome to my portfolio page")
+      meta(name="keywords" content="portfolio, creative, designer, developer, full-stack, riwayet samnan samnan, portfolio site, homepage")
+      meta(property="og:title" content="Riwayet Samnan | Designer and developer")
+      meta(property="og:description" content="Hi, I'm Riwayet Samnan. I'm a passionate full-stack developer and user interface, user experience and illustration designer.")
+      meta(property="og:image" content="img/rs_bg.jpg")
+      meta(property="og:image:width" content="450")
+      meta(property="og:image:height" content="450")
+      meta(name="theme-color" content="#1f1f29")
+      link(rel="shortcut icon" href="img/rs_icon.png")
+      link(rel="icon" type="image/png" sizes="100x100" href="img/rs_bg.jpg")
+      link(rel="app-touch-icon" type="image/png" sizes="40x40" href="img/rs_bg.jpg")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Sen&display=swap")
+      link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+      title Portfolio | Samnan
+   body
+      .load
+         .circ
+
+      nav#navbar
+         buttons.navbutton
+            img(src="img/icons/menu.svg")
+         h1.logo RS
+         ul
+            li
+               a(href="index.pug").slide-effect.navlink
+                  p Home
+            li
+               a(href="").slide-effect.navlink
+                  p About
+            li
+               a(href="").slide-effect.navlink.active
+                  p Portfolio
+            li
+               a(href="").slide-effect.navlink.imp
+                  p Contact
+
+      div#sidebar
+         button.button.navclosebutton
+            img(src="img/icons/close.svg")
+         a(href="index.pug").left Home
+         a(href="").right.navlink About
+         a(href="").left.navlink.active Portfolio
+         a(href="").right.navlink Contact
+
+      div#bottom-nav
+         a(href="index.pug").navlink
+            img(src="img/icons/home.svg", alt="Home")
+         a(href="").navlink
+            img(src="img/icons/me.svg", alt="About")
+         a(href="").active.navlink
+            img(src="img/icons/portfolio.svg", alt="Portfolio")
+         a(href="").navlink
+            img(src="img/icons/chat.svg", alt="Contact")
+
+      .headerNav
+         ul
+            li
+               a(href="index.pug").navlink Home
+            li
+               a(href="").navlink About
+            li
+               a(href="").active.navlink Portfolio
+            li
+               a(href="").navlink Contact
+
+      .projectView
+         button.close-btn
+            img(src="img/icons/close.svg")
+         .projectCont
+            .img-cont.overflow-hidden
+               img(src="img/lake.jpg", alt="Project").main-img
+            .text-cont
+               h1.title Lorem
+               p.para Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit soluta nulla officia aperiam aliquam est ratione neque doloremque sapiente eos.
+               .links
+                  a(href="").slide-effect.dribbble
+                     img(src="img/icons/dribbble.svg")
+                     p Dribbble
+                  a(href="").slide-effect.behance
+                     img(src="img/icons/behance.svg")
+                     p Behance
+               .buttons
+                  button.prev
+                     img(src="img/icons/next.svg")
+                     p Prev
+                  button.next
+                     img(src="img/icons/next.svg")
+                     p Next
+
+      .otherProjectView
+         button.otherProject-close-btn
+            img(src="img/icons/close.svg")
+         .img-cont.overflow-hidden
+            img(src="" alt="project").main-section-img
+         .content
+            .links
+               a(href="").dribbble
+                  img(src="img/icons/dribbble.svg", alt="")
+                  p Dribbble
+               a(href="").behance
+                  img(src="img/icons/behance.svg", alt="")
+                  p Behance
+            .buttons
+               button.prev
+                  img(src="img/icons/next.svg", alt="")
+                  p Prev
+               button.next
+                  img(src="img/icons/next.svg", alt="")
+                  p Next
+
+      header
+         .overlay
+         .img-cont
+            img(src="img/night_sky.jpg")
+         h1.header-title A piece of my work
+
+      section#mainwork
+         .cont
+            button.start-proj
+               .img-cont
+                  img(src="img/darkslint.jpg", alt="Project")
+               .content
+                  h1 Slint
+                  .links
+                     a(href="https://dribbble.com/shots/10971109-Dark-theme-for-my-chat-app").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/95873235/Slint").behance
+                        img(src="img/icons/behance.svg")
+            button.start-proj
+               .img-cont
+                  img(src="img/lake.jpg", alt="Project")
+               .content
+                  h1 Lake
+                  .links
+                     a(href="https://dribbble.com/shots/11256517-Lake-illustration").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96171403/Remember-a-vacation").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/night_sky.jpg", alt="Project")
+               .content
+                  h1 Night sky
+                  .links
+                     a(href="https://dribbble.com/shots/11281888-Night-sky-savana").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96501251/Night-sky-savana").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/coffee_site.jpg", alt="Project")
+               .content
+                  h1 Coffee site
+                  .links
+                     a(href="https://dribbble.com/shots/11262636-Simple-Coffee-Site").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/95865073/Simple-Coffee-site").behance
+                        img(src="img/icons/behance.svg")
+
+      section#otherwork
+         h1.title Other works
+
+         .cont
+            button.proj
+               .img-cont
+                  img(src="img/night_day_tree.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://dribbble.com/shots/11261353-Tree-in-front-of-day-and-night").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96107487/Tree-in-front-of-day-and-night").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/phone_publish.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://dribbble.com/shots/11259519-My-portfolio-homepage-finished").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96443285/My-portfolio-home-page").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/travel.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://dribbble.com/shots/11183768-Travel-site-design").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96091613/Travel-site-design").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/jungle.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://dribbble.com/shots/11183776-Morning-in-mountains-illustration").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96050113/Morning-in-mountains-illustration").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/human_ill.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://www.behance.net/gallery/95293003/My-first-illustration").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://dribbble.com/shots/11033954-My-first-illustration").behance
+                        img(src="img/icons/behance.svg")
+            button.proj
+               .img-cont
+                  img(src="img/women_sarree.jpg", alt="")
+               .content
+                  .links
+                     a(href="https://dribbble.com/shots/11232690-Women-on-saree-illustration").dribbble
+                        img(src="img/icons/dribbble.svg")
+                     a(href="https://www.behance.net/gallery/96331069/Human-illustration").behance
+                        img(src="img/icons/behance.svg")
+      
+      h1.follow Follow my daily work on <span><a href="https://dribbble.com/Samnan">Dribbble</a> or <a href="https://behance.net/riwayetsamann">Behance</a>
+
+      section#otherpages
+         h1 Also see
+         .links
+            a(href="index.pug").submain.navlink Home
+            a(href="").main.navlink Contact
+         
+      footer
+         p CopyRight &copy; 2020 | Riwayet Samnan <span>  Developed by Samnan</span>
+         .links
+            a(href="https://twitter.com/r_samnan")
+               img(src="img/icons/twitter.svg", alt="")
+            a(href="https://facebook.com/riwayet.samnan.5")
+               img(src="img/icons/facebook.svg", alt="")
+            a(href="https://dribbble.com/Samnan")
+               img(src="img/icons/dribbble.svg", alt="")
+            a(href="https://behance.net/riwayetsamnan")
+               img(src="img/icons/behance.svg", alt="")
+            a(href="https://github.com/riwayet-samnan")
+               img(src="img/icons/github.svg", alt="")
+
+   script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js")
+   script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js")
+   script(src="js/portfolio.js")
